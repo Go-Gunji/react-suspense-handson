@@ -3,5 +3,6 @@ function sleep(ms: number) {
 }
 
 export const AlwaysSuspend: React.VFC = () => {
+  console.log("AlwaysSuspend is renderd");
   throw sleep(1000);
 };
