@@ -3,6 +3,7 @@ import { AlwaysSuspend } from "./AlwaysSuspend";
 import { SometimesSuspend } from "./SometimesSuspend";
 import "./App.css";
 import { RenderingNotifier } from "./RenderingNotifier";
+import { DataLoader } from "./DataLoader";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,14 +13,15 @@ function App() {
       <RenderingNotifier name="outside-Suspense" />
       <Suspense fallback={<p>Loading...</p>}>
         {/* <AlwaysSuspend /> */}
-        <SometimesSuspend />
+        {/* <SometimesSuspend />
         <RenderingNotifier name="inside-Suspense" />
         <div>
           <button className="border p-1" onClick={() => setCount((c) => c + 1)}>
             {count}
           </button>
         </div>
-        <p>サスペンドが終了するまでここは表示されない</p>
+        <p>サスペンドが終了するまでここは表示されない</p> */}
+        <DataLoader />
       </Suspense>
     </div>
   );
